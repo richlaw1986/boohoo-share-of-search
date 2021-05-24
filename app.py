@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
-import base64
 
 
 
@@ -39,26 +38,6 @@ def load_data():
     return data_two
 
 data_two = load_data()
-
-def get_table_download_link(df):
-    """Generates a link allowing the data in a given panda dataframe to be downloaded
-    in:  dataframe
-    out: href string
-    """
-    csv = df.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
-    href = f'<a href="data:file/csv;base64,{b64}" download="absolute-trends.csv">Download csv file</a>'
-    return href
-
-def get_table_download_link_two(df):
-    """Generates a link allowing the data in a given panda dataframe to be downloaded
-    in:  dataframe
-    out: href string
-    """
-    csv = df.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
-    href = f'<a href="data:file/csv;base64,{b64}" download="relative-trends.csv">Download csv file</a>'
-    return href
 
 st.sidebar.markdown("### Choose View")
 select = st.sidebar.selectbox('Metric', ['Absolute Trends', 'Relative Trend'], key='5')
