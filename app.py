@@ -44,15 +44,15 @@ select = st.sidebar.selectbox('Metric', ['Absolute Trends', 'Relative Trend'], k
 if not st.sidebar.checkbox("Hide", False, key=5):
     if select == 'Absolute Trends':
         st.markdown("#### The graphs show the trend for each brand in isolation on a weekly basis over the past 5 years.  Zoom into to any time period over the past 5 years by selecting a portion of the graph, then zoom back out by double-clicking.")
-        fig_26 = px.line(data, x="Date", y="Boohoo",  title='Bulb Absolute Trend')
+        fig_26 = px.line(data, x="Date", y="Boohoo",  title='Boohoo Absolute Trend')
         st.plotly_chart(fig_26, use_container_width=True)
-        fig_27 = px.line(data, x="Date", y="ASOS",  title='Octopus Absolute Trend')
+        fig_27 = px.line(data, x="Date", y="ASOS",  title='ASOS Absolute Trend')
         st.plotly_chart(fig_27, use_container_width=True)
-        fig_28 = px.line(data, x="Date", y="Missguided",  title='OVO Absolute Trend')
+        fig_28 = px.line(data, x="Date", y="Missguided",  title='Missguided Absolute Trend')
         st.plotly_chart(fig_28, use_container_width=True)
-        fig_29 = px.line(data, x="Date", y="Prettylittlething", title='Good Energy Absolute Trends')
+        fig_29 = px.line(data, x="Date", y="PrettyLittleThing", title='PrettyLittleThing Absolute Trends')
         st.plotly_chart(fig_29, use_container_width=True)
-        fig_30 = px.line(data, x="Date", y="Nasty Gal",  title="People's Energy Absolute Trend")
+        fig_30 = px.line(data, x="Date", y="Nasty Gal",  title="Nast Galy Absolute Trend")
         st.plotly_chart(fig_30, use_container_width=True)
     if select == 'Relative Trend':
         st.markdown("#### The graph shows estimated weekly search volume by brand - by combining a relative Google Trends score over the past 5 years with an estimated search volume for each brand. Zoom into to any time period over the past 5 years by selecting a portion of the graph, then zoom back out by double-clicking.")
