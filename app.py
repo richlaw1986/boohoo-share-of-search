@@ -17,7 +17,7 @@ DATA_URL = (
     "boohoo-absolute-data.csv"
 )
 
-st.title("Boohoo Share of Search Dashboard")
+st.title("Share of Search Dashboard")
 
 #with open("style.css") as f:
 #    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
