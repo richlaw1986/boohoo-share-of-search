@@ -46,7 +46,7 @@ def load_data():
 
 data_two = load_data()
 
-st.sidebar.markdown("### Choose View")
+#st.sidebar.markdown("### Choose View")
 select = st.sidebar.selectbox('Metric', ['Relative Trend', 'Absolute Trends'], key='5')
 if not st.sidebar.checkbox("Hide", False, key=5):
     if select == 'Relative Trend':
