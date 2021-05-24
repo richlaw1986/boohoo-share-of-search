@@ -21,7 +21,7 @@ st.title("Boohoo Share of Search Dashboard")
 
 #with open("style.css") as f:
 #    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-image = Image.open('Boohoo.png')
+image = Image.open('boohoo.png')
 st.sidebar.image(image)
 st.sidebar.title("Choose an Option")
 
