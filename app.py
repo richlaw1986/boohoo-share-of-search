@@ -8,6 +8,7 @@ import plotly.graph_objects as go
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
+from PIL import Image
 
 
 st.set_page_config(page_title=None, page_icon=None, layout='wide', initial_sidebar_state='auto')
@@ -17,6 +18,11 @@ DATA_URL = (
 )
 
 st.title("Boohoo Share of Search Dashboard")
+
+#with open("style.css") as f:
+#    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+image = Image.open('Boohoo.png')
+st.sidebar.image(image)
 st.sidebar.title("Choose an Option")
 
 
